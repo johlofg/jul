@@ -13,13 +13,15 @@ const forth = useSelector(store => store.survey.fraga4)
 
   return (
     <div className="summary">
-      <p>Hi!</p>
       <h3>Tack!</h3>
+      <p>Första frågan: </p> 
       <p>{first}</p>
+      <p>Andra frågan: </p> 
       <p>{second}</p>
+      <p>Tredje frågan: </p> 
       <p>{third}</p>
+      <p>Fjärde frågan: </p> 
       <p>{forth}</p>
-
     </div>
   )
 }

@@ -1,22 +1,25 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = localStorage.getItem('survey')
-  ? {
-    klar: JSON.parse(localStorage.getItem('survey')).klar,    
-    fraga1: null,
-    fraga2: null,
-    fraga3: null,
-    fraga4: null    
-  }
-  : {
-    klar: null,
-    fraga1: null,
-    fraga2: null,
-    fraga3: null,
-    fraga4: null  
-  }
-  
-    const survey = createSlice({
+
+? {
+  klar: JSON.parse(localStorage.getItem('survey')).klar, 
+  timesUp: false,
+  fraga1: '',
+  fraga2: '',
+  fraga3: '',
+  fraga4: '',    
+}
+: {
+  klar: false,
+  timesUp: false,
+  fraga1: '',
+  fraga2: '',
+  fraga3: '',
+  fraga4: '',  
+}
+
+const survey = createSlice({
   name: 'survey',
   initialState,
   reducers: {
@@ -33,7 +36,10 @@ const initialState = localStorage.getItem('survey')
       store.fraga4 = action.payload         
     },
     setKlar: (store, action) => {
-      store.klar = action.payload  
+      store.klar = action.payload       
+    },
+    setTimesUp: (store, action) => {
+      store.timesUp = action.payload 
     }
   }
 })

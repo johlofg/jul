@@ -53,14 +53,21 @@ code {
   font-size: 20px;
 }
 
-button {
+.next-button {
   margin: 20px 20px 0 20px;
   padding: 5px;
   width: 80px;
   height: 50px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(250, 250, 250);
   border-radius: 5px;
   font-weight: bold;
 }
 
+.next-button:active {
+  background-color: rgb(184, 181, 181);
+}
+
+.summary {
+  color: #fff;
+}
 
