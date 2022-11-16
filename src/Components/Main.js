@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import Form from './Form'
 import Counter from './Counter'
 import Firework from './Firework';
-// import ClearBtn from './ClearBtn'
+import ClearBtn from './ClearBtn'
 
 const Main = () => {
 
@@ -16,7 +16,7 @@ const Main = () => {
           <Firework />
         )}
         <div className="main">  
-          {/* <ClearBtn /> */}
+          <ClearBtn />
           <Counter />
           <Form />
         </div>
